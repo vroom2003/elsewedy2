@@ -15,7 +15,7 @@ def chrome(root: str, title: str, active: str = "") -> tuple[str, str]:
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{r}assets/css/main.css">
-  <link rel="icon" href="{r}assets/img/logo.svg">
+  <link rel="icon" href="{r}assets/img/elsewedy-logo.jpg">
 </head>
 <body data-root="{r}">
 <a class="skip" href="#main">Skip to content</a>
@@ -31,12 +31,8 @@ def chrome(root: str, title: str, active: str = "") -> tuple[str, str]:
 </div>
 <header class="header">
   <div class="wrap header-row">
-    <a class="logo" href="{r}index.html">
-      <img src="{r}assets/img/logo.svg" alt="" width="42" height="42">
-      <div>
-        <strong>ELSEWEDY</strong>
-        <span>People &amp; Talent</span>
-      </div>
+    <a class="logo" href="{r}index.html" style="display:flex; align-items:center; gap:12px;">
+      <img src="{r}assets/img/elsewedy-logo.jpg" alt="Elsewedy Consultancy" height="44" style="border-radius:4px; max-width:200px; object-fit:contain;">
     </a>
     <button class="menu-toggle" type="button" aria-label="Open menu">☰</button>
     <ul class="nav">
@@ -155,7 +151,7 @@ pages = {}
 pages["index.html"] = (
     "People & Talent | Elsewedy Zimbabwe",
     """
-<section class="hero">
+<section class="hero" style="background-image: linear-gradient(rgba(15,37,55,.85), rgba(15,37,55,.85)), url('assets/img/banner-services.jpg'); background-size: cover; background-position: center;">
   <div class="wrap hero-inner">
     <p class="eyebrow">Internal Audit &amp; Talent Partner in Zimbabwe</p>
     <h1>Strong operations<br>built on strong<br>internal audit.</h1>
@@ -194,8 +190,9 @@ pages["index.html"] = (
         </article>
       </div>
     </div>
-    <div class="photo" style="background-image:linear-gradient(rgba(15,37,55,.2),rgba(15,37,55,.2)), url('assets/img/hero.svg')">
-      <span class="badge-circle"></span>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <img src="assets/img/flyer-audit.jpg" alt="Internal Audit Functions and Training Services" style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.12); object-fit:cover;">
+      <img src="assets/img/flyer-consultancy.jpg" alt="Consultancy Services" style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.12); object-fit:cover;">
     </div>
   </div>
 </section>
@@ -266,7 +263,11 @@ pages["index.html"] = (
       <p class="kicker">Contact Us</p>
       <h2>Your trusted partner in operational excellence.</h2>
       <p>Whether you require internal audit functions, final accounts preparation, job appraisals, or workforce outsourcing in Zimbabwe, our desk is ready to assist.</p>
-      <p style="margin-top:16px"><strong>Contact Person:</strong> Mavhondo Fanwell Tatenda<br><strong>Contact Number:</strong> +263 713 174 032<br><strong>Email:</strong> info@elsewedyconsultancy.com</p>
+      <p style="margin-top:16px">
+        <strong>Contact Person:</strong> Administrator<br>
+        <strong>Contact Numbers:</strong> +263 713 174 032 / +263 8644 118 220<br>
+        <strong>Email:</strong> info@elsewedyconsultancy.com
+      </p>
       <a class="btn" href="contact.html" style="margin-top:12px">Talk to our consultants</a>
     </div>
     <form class="form card" data-demo-form>
@@ -487,7 +488,7 @@ SERVICE_PAGES = {
 }
 
 
-def service_body(heading: str, intro: str, items: list[str]) -> str:
+def service_body(heading: str, intro: str, items: list[str], root_path: str = "") -> str:
     lis = "".join(f"<li>{item}</li>" for item in items)
     return f"""
 <section class="page-hero">
@@ -502,12 +503,16 @@ def service_body(heading: str, intro: str, items: list[str]) -> str:
     <div>
       <h2>Key Features &amp; Deliverables</h2>
       <ul class="list-check">{lis}</ul>
-      <p style="margin-top:28px"><a class="btn" href="contact.html">Request a Consultation</a></p>
+      <p style="margin-top:28px"><a class="btn" href="{root_path}contact.html">Request a Consultation</a></p>
     </div>
     <aside class="card">
+      <img src="{root_path}assets/img/flyer-audit.jpg" alt="Service Flyer" style="width:100%; border-radius:8px; margin-bottom:16px;">
       <h3>Who We Serve</h3>
       <p>Schools, mining enterprises, industrial manufacturers, commercial groups, and corporate boards seeking reliable internal audit and workforce solutions across Zimbabwe.</p>
-      <p class="muted" style="margin-top:16px; border-top: 1px solid var(--line); padding-top:12px;"><strong>Entity:</strong> Conrad Forester Investments (Reg No: 260/2021)<br><strong>Contact:</strong> Mavhondo Fanwell Tatenda (+263 713 174 032)</p>
+      <p class="muted" style="margin-top:16px; border-top: 1px solid var(--line); padding-top:12px;">
+        <strong>Entity:</strong> Conrad Forester Investments (Reg No: 260/2021)<br>
+        <strong>Contact:</strong> Administrator (+263 713 174 032 / +263 8644 118 220)
+      </p>
     </aside>
   </div>
 </section>
@@ -538,12 +543,12 @@ pages["locations.html"] = (
     """
 <section class="page-hero"><div class="wrap"><p class="kicker">Locations</p><h1>Where You Will Find Us</h1><p class="lead">Our consultants operate in key industrial, mining, and commercial centers across Zimbabwe.</p></div></section>
 <section class="section"><div class="wrap grid-3">
-  <article class="office"><h3>Harare (Head Office)</h3><p>Conrad Forester Investments, Harare Commercial Center.</p><p>Contact: Mavhondo Fanwell Tatenda</p><p>Tel. +263 713 174 032</p></article>
-  <article class="office"><h3>Bulawayo</h3><p>Belmont Industrial Area Operations Desk.</p><p>Tel. +263 29 200 0000</p></article>
-  <article class="office"><h3>Mutare</h3><p>Eastern Highlands Commercial Suite.</p><p>Tel. +263 20 200 0000</p></article>
-  <article class="office"><h3>Gweru</h3><p>Midlands Mining &amp; Industrial Liaison.</p><p>Tel. +263 54 200 0000</p></article>
-  <article class="office"><h3>Masvingo</h3><p>Agricultural &amp; Regional Project Desk.</p><p>Tel. +263 39 200 0000</p></article>
-  <article class="office"><h3>Johannesburg Liaison</h3><p>Regional SADC Cross-Border Desk.</p><p>Tel. +27 11 000 0000</p></article>
+  <article class="office"><h3>Harare (Head Office)</h3><p>Conrad Forester Investments, Harare Commercial Center.</p><p>Contact: Administrator</p><p>Tel. +263 713 174 032 / +263 8644 118 220</p></article>
+  <article class="office"><h3>Bulawayo</h3><p>Belmont Industrial Area Operations Desk.</p><p>Tel. +263 713 174 032 / +263 8644 118 220</p></article>
+  <article class="office"><h3>Mutare</h3><p>Eastern Highlands Commercial Suite.</p><p>Tel. +263 713 174 032 / +263 8644 118 220</p></article>
+  <article class="office"><h3>Gweru</h3><p>Midlands Mining &amp; Industrial Liaison.</p><p>Tel. +263 713 174 032 / +263 8644 118 220</p></article>
+  <article class="office"><h3>Masvingo</h3><p>Agricultural &amp; Regional Project Desk.</p><p>Tel. +263 713 174 032 / +263 8644 118 220</p></article>
+  <article class="office"><h3>Johannesburg Liaison</h3><p>Regional SADC Cross-Border Desk.</p><p>Tel. +263 713 174 032 / +263 8644 118 220</p></article>
 </div></section>
 """,
     False,
@@ -556,7 +561,7 @@ pages["contact.html"] = (
 <section class="section"><div class="wrap split">
   <div>
     <h2>Send a Message</h2>
-    <p style="margin-bottom:20px;"><strong>Email:</strong> info@elsewedyconsultancy.com<br><strong>Phone:</strong> +263 713 174 032</p>
+    <p style="margin-bottom:20px;"><strong>Email:</strong> info@elsewedyconsultancy.com<br><strong>Phones:</strong> +263 713 174 032 / +263 8644 118 220</p>
     <form class="form" data-demo-form>
       <input name="name" placeholder="Full Name*" required>
       <input name="company" placeholder="Company / Institution*" required>
@@ -568,14 +573,15 @@ pages["contact.html"] = (
     </form>
   </div>
   <div>
+    <img src="assets/img/flyer-consultancy.jpg" alt="Elsewedy Consultancy Overview" style="width:100%; border-radius:12px; margin-bottom:20px; box-shadow:0 8px 24px rgba(0,0,0,0.12);">
     <h2>Office Details</h2>
     <article class="office" style="margin-bottom:16px">
       <strong>Company Registration &amp; Entity</strong>
       <p>Conrad Forester Investments (Reg No: 260/2021)<br>t/a Elsewedy People &amp; Talent</p>
     </article>
     <article class="office" style="margin-bottom:16px">
-      <strong>Contact Person</strong>
-      <p>Mavhondo Fanwell Tatenda<br>Direct Line: +263 713 174 032<br>Email: info@elsewedyconsultancy.com</p>
+      <strong>Contact Desk</strong>
+      <p>Administrator<br>Direct Lines: +263 713 174 032 / +263 8644 118 220<br>Email: info@elsewedyconsultancy.com</p>
     </article>
     <article class="office">
       <strong>Main Operating Locations</strong>
@@ -604,7 +610,7 @@ pages["news.html"] = (
     """
 <section class="page-hero"><div class="wrap"><p class="kicker">Insights</p><h1>News &amp; Industry Articles</h1><p class="lead">Expert commentary on internal audit, governance, labour law, and workforce training in Zimbabwe.</p></div></section>
 <section class="section"><div class="wrap grid-3">
-  <article class="news-card"><p class="muted">12 Mar 2026 · Mavhondo Fanwell Tatenda</p><h3><a href="news/skills-for-industry.html">Building Strong Internal Audit &amp; Risk Governance in Schools &amp; Enterprises</a></h3><p>How structured internal controls and governance strengthen financial management and resource allocation.</p></article>
+  <article class="news-card"><p class="muted">12 Mar 2026 · Administrator</p><h3><a href="news/skills-for-industry.html">Building Strong Internal Audit &amp; Risk Governance in Schools &amp; Enterprises</a></h3><p>How structured internal controls and governance strengthen financial management and resource allocation.</p></article>
   <article class="news-card"><p class="muted">02 Feb 2026 · Elsewedy Consulting Desk</p><h3><a href="news/workforce-planning.html">Job Appraisals &amp; Labour Compliance under Zimbabwean Regulations</a></h3><p>Designing performance appraisal systems aligned with the Zimbabwean Labour Act.</p></article>
 </div></section>
 """,
@@ -726,7 +732,7 @@ pages["jobs/shift-operations-lead.html"] = (
 pages["news/skills-for-industry.html"] = (
     "Internal Audit & Governance | Elsewedy Zimbabwe",
     """
-<section class="page-hero"><div class="wrap"><p class="muted">12 Mar 2026 · Mavhondo Fanwell Tatenda</p><h1>Building Strong Internal Audit &amp; Risk Governance in Schools &amp; Enterprises</h1></div></section>
+<section class="page-hero"><div class="wrap"><p class="muted">12 Mar 2026 · Administrator</p><h1>Building Strong Internal Audit &amp; Risk Governance in Schools &amp; Enterprises</h1></div></section>
 <section class="section"><div class="wrap prose">
   <p>Robust operational and financial performance relies on solid internal audit functions and clear governance frameworks. When schools and commercial organizations implement objective internal audit mechanisms, resource management improves and risk is mitigated proactively.</p>
   <p>At Conrad Forester Investments t/a Elsewedy People &amp; Talent, we help institutions strengthen governance structures, ensure statutory compliance, and streamline internal control systems for sustainable growth across Zimbabwe.</p>
