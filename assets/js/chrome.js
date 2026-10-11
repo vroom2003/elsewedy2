@@ -14,12 +14,8 @@
 </div>
 <header class="header">
   <div class="wrap header-row">
-    <a class="logo" href="${r}index.html">
-      <img src="${r}assets/img/logo.svg" alt="" width="42" height="42">
-      <div>
-        <strong>ELSEWEDY</strong>
-        <span>People &amp; Talent</span>
-      </div>
+    <a class="logo" href="${r}index.html" style="display:flex; align-items:center; gap:12px;">
+      <img src="${r}assets/img/elsewedy-logo.jpg" alt="Elsewedy Consultancy" height="44" style="border-radius:4px; max-width:200px; object-fit:contain;">
     </a>
     <button class="menu-toggle" type="button" aria-label="Open menu">☰</button>
     <ul class="nav">

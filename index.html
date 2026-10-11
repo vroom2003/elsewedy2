@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="icon" href="assets/img/logo.svg">
+  <link rel="icon" href="assets/img/elsewedy-logo.jpg">
 </head>
 <body data-root="">
 <a class="skip" href="#main">Skip to content</a>
@@ -24,12 +24,8 @@
 </div>
 <header class="header">
   <div class="wrap header-row">
-    <a class="logo" href="index.html">
-      <img src="assets/img/logo.svg" alt="" width="42" height="42">
-      <div>
-        <strong>ELSEWEDY</strong>
-        <span>People &amp; Talent</span>
-      </div>
+    <a class="logo" href="index.html" style="display:flex; align-items:center; gap:12px;">
+      <img src="assets/img/elsewedy-logo.jpg" alt="Elsewedy Consultancy" height="44" style="border-radius:4px; max-width:200px; object-fit:contain;">
     </a>
     <button class="menu-toggle" type="button" aria-label="Open menu">☰</button>
     <ul class="nav">
@@ -80,7 +76,7 @@
 </header>
 <main id="main">
 
-<section class="hero">
+<section class="hero" style="background-image: linear-gradient(rgba(15,37,55,.85), rgba(15,37,55,.85)), url('assets/img/banner-services.jpg'); background-size: cover; background-position: center;">
   <div class="wrap hero-inner">
     <p class="eyebrow">Internal Audit &amp; Talent Partner in Zimbabwe</p>
     <h1>Strong operations<br>built on strong<br>internal audit.</h1>
@@ -119,8 +115,9 @@
         </article>
       </div>
     </div>
-    <div class="photo" style="background-image:linear-gradient(rgba(15,37,55,.2),rgba(15,37,55,.2)), url('assets/img/hero.svg')">
-      <span class="badge-circle"></span>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <img src="assets/img/flyer-audit.jpg" alt="Internal Audit Functions and Training Services" style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.12); object-fit:cover;">
+      <img src="assets/img/flyer-consultancy.jpg" alt="Consultancy Services" style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.12); object-fit:cover;">
     </div>
   </div>
 </section>
@@ -191,7 +188,11 @@
       <p class="kicker">Contact Us</p>
       <h2>Your trusted partner in operational excellence.</h2>
       <p>Whether you require internal audit functions, final accounts preparation, job appraisals, or workforce outsourcing in Zimbabwe, our desk is ready to assist.</p>
-      <p style="margin-top:16px"><strong>Contact Person:</strong> Mavhondo Fanwell Tatenda<br><strong>Contact Number:</strong> +263 713 174 032<br><strong>Email:</strong> info@elsewedyconsultancy.com</p>
+      <p style="margin-top:16px">
+        <strong>Contact Person:</strong> Administrator<br>
+        <strong>Contact Numbers:</strong> +263 713 174 032 / +263 8644 118 220<br>
+        <strong>Email:</strong> info@elsewedyconsultancy.com
+      </p>
       <a class="btn" href="contact.html" style="margin-top:12px">Talk to our consultants</a>
     </div>
     <form class="form card" data-demo-form>
