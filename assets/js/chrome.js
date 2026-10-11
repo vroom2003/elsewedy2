@@ -46,7 +46,7 @@
           <a href="${r}outsourcing.html">Outsourcing</a>
           <a href="${r}payroll.html">Payroll Outsourcing</a>
           <a href="${r}employer-of-record.html">Employer of Record</a>
-          <a href="${r}labour-law.html">Egypt Labour Law Consulting</a>
+          <a href="${r}labour-law.html">Zimbabwe Labour Law Consulting</a>
           <a href="${r}government-affairs.html">Governmental Affairs Solutions</a>
           <a href="${r}talent-management.html">Talent Management</a>
           <a href="${r}employer-branding.html">Employment Branding</a>
@@ -73,16 +73,16 @@
 <footer class="footer">
   <div class="wrap footer-grid">
     <div>
-      <h4>Elsewedy People</h4>
-      <p>Human-capital pages for industrial, energy, and corporate teams across Egypt and the region. Layout follows a typical HR-agency map; all wording and marks here are original.</p>
+      <h4>Elsewedy People &amp; Talent</h4>
+      <p>Professional consulting in internal audit, final accounts, job appraisals, training &amp; development, and labour outsourcing across Zimbabwe. Registered under Conrad Forester Investments (Reg No: 260/2021).</p>
     </div>
     <div>
       <h4>Services</h4>
       <ul>
         <li><a href="${r}executive-search.html">Executive Search</a></li>
-        <li><a href="${r}outsourcing.html">Workforce Outsourcing</a></li>
-        <li><a href="${r}payroll.html">Payroll</a></li>
-        <li><a href="${r}hr-consulting.html">HR Consulting</a></li>
+        <li><a href="${r}outsourcing.html">Labour Outsourcing</a></li>
+        <li><a href="${r}payroll.html">Payroll Services</a></li>
+        <li><a href="${r}hr-consulting.html">HR &amp; Internal Audit</a></li>
       </ul>
     </div>
     <div>
@@ -91,27 +91,27 @@
         <li><a href="${r}jobs.html">Open vacancies</a></li>
         <li><a href="${r}send-cv.html">Send your CV</a></li>
         <li><a href="${r}candidate-profiles.html">Talent community</a></li>
-        <li><a href="${r}news.html">News</a></li>
+        <li><a href="${r}news.html">News &amp; Insights</a></li>
       </ul>
     </div>
     <div>
       <h4>Offices</h4>
       <ul>
-        <li>New Cairo</li>
-        <li>10th of Ramadan</li>
-        <li>6th of October</li>
+        <li>Harare</li>
+        <li>Bulawayo</li>
+        <li>Mutare</li>
         <li><a href="${r}contact.html">Contact the desk</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap legal">
-    <span>© <span data-year></span> Elsewedy People. Demo site with original copy.</span>
+    <span>© <span data-year></span> Elsewedy People &amp; Talent · Conrad Forester Investments (Reg No: 260/2021). All rights reserved.</span>
     <span>
       <a href="${r}privacy.html">Privacy Policy</a>
       ·
       <a href="${r}cookies.html">Cookie Policy</a>
       ·
-      <a href="${r}contact.html">Contact</a>
+      <a href="${r}contact.html">Contact Us</a>
     </span>
   </div>
 </footer>

@@ -2,14 +2,14 @@
   --ink: #121418;
   --ink-soft: #3a3f46;
   --muted: #6b717a;
-  --line: #e6e4df;
-  --paper: #f7f5f1;
+  --line: #e3e7ed;
+  --paper: #f4f6f8;
   --white: #ffffff;
-  --coral: #e25b45;
-  --coral-dark: #c44733;
-  --navy: #1b2430;
-  --hero: #2a2e33;
-  --shadow: 0 18px 50px rgba(18, 20, 24, 0.12);
+  --coral: #6b9e1b;
+  --coral-dark: #558213;
+  --navy: #102136;
+  --hero: #0f2537;
+  --shadow: 0 18px 50px rgba(16, 33, 54, 0.12);
   --radius: 999px;
   --max: 1180px;
   --header: 118px;
@@ -121,6 +121,7 @@ p {
   font-family: Outfit, sans-serif;
   font-size: 18px;
   letter-spacing: 0.08em;
+  color: var(--navy);
 }
 
 .logo span {
@@ -128,7 +129,8 @@ p {
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--coral);
+  font-weight: 600;
 }
 
 .nav {
@@ -245,7 +247,7 @@ p {
   display: grid;
   align-items: center;
   background:
-    linear-gradient(90deg, rgba(18, 20, 24, 0.72), rgba(18, 20, 24, 0.28)),
+    linear-gradient(90deg, rgba(16, 33, 54, 0.85), rgba(16, 33, 54, 0.4)),
     url("../img/hero.svg") center / cover no-repeat;
 }
 
@@ -324,8 +326,10 @@ p {
   display: grid;
   place-items: center;
   min-height: 64px;
-  color: var(--ink);
-  opacity: 0.8;
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
 }
 
 .split {
@@ -397,6 +401,7 @@ p {
   font-size: clamp(56px, 8vw, 92px);
   font-weight: 500;
   line-height: 1;
+  color: var(--coral);
 }
 
 .pillars {
@@ -442,9 +447,10 @@ p {
 
 .tag {
   display: inline-block;
-  background: #efe7dc;
-  color: #6a4e2a;
+  background: #eef5e6;
+  color: #3b5a10;
   font-size: 12px;
+  font-weight: 600;
   padding: 4px 10px;
   margin-bottom: 12px;
 }
@@ -506,7 +512,7 @@ p {
 }
 
 .footer {
-  background: #111318;
+  background: #0d1a2b;
   color: #c9ccd1;
   padding: 56px 0 24px;
   font-size: 14px;
